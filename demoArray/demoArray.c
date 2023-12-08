@@ -29,6 +29,7 @@ int main()
     printf("%p\n", &len);
 //数组的地址和数组的首元素地址是一样的
 #endif
+#if 0//memset
     int array[BUFFER_SIZE];
     memset(array, 0, sizeof(array)); // 清楚脏数据
     printf("=============\n");
