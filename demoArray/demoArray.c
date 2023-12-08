@@ -29,14 +29,22 @@ int main()
     printf("%p\n", &len);
 //数组的地址和数组的首元素地址是一样的
 #endif
-#if 0//memset
-    int array[BUFFER_SIZE];
+#if 0 // memset
+int array[BUFFER_SIZE];
     memset(array, 0, sizeof(array)); // 清楚脏数据
     printf("=============\n");
     for (int idx = 0; idx < BUFFER_SIZE; idx++)
     {
         printf("array[%d]=%d\n", idx, array[idx]);
     }
+
+#endif
+    // 数组的越界访问，判断索引的有效性
+    int array[BUFFER_SIZE];
+    memset(array, 0, sizeof(array)); // 清楚脏数据
+    printf("=============\n");
+    printf("array[-1]=%d\n", array[-1]);
+    printf("array[10]=%d\n", array[10]);
 
     return 0;
 }
