@@ -8,7 +8,27 @@
 // 没有的情况需要写void
 // 如果有返回你想返回的类型
 // 什么是API：application programing interface
-#if 1
+
+int main()
+{
+#if 0 // 枚举也是一种数据类型
+    
+    typedef enum STATUS_CODE
+    {
+        ON_SUCCESS,
+        ON_ERROR,
+        ON_NULLPTR,
+        ON_MALLLOCFAIL,
+    } STATUS_CODE;
+    // 取别名
+    // 用STATUS_CODE代替enum STATUS_CODE
+    __uint16_t a;
+
+    STATUS_CODE status;
+    int len = sizeof(status);
+    printf("len=%d\n", len);
+#endif
+#if 0
 // case1:没有参数，没有返回值
 void purchaseAppointThing()
 {
@@ -32,10 +52,8 @@ int myAddNum(int num1, int num2)
 }
 
 #endif
-int main()
-{
-
-    purchaseAppointThing();
+#if 0
+ purchaseAppointThing();
     int num1 = 5;
     int num2 = 6;
     int transFormersPrice = 10;
@@ -48,5 +66,24 @@ int main()
     {
         printf(" not get a tansFormers\n");
     }
+#endif
+#if 1
+    int num1 = 50;
+    int num2 = 60;
+
+    int sum = calculateAdd(num1, num2);
+    printf("sum=%d\n", sum);
+
+    int num3 = calculateSub(num1, num2);
+    printf("num3=%d\n", num3);
+
+    int amass = calculateMul(num1, num2);
+    printf("amass=%d\n", amass);
+
+    int num4 = calculateDiv(num1, num2);
+    printf("num4=%d\n", num4);
+
+#endif
+
     return 0;
 }
