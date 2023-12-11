@@ -32,8 +32,12 @@ int main()
     char *ptr = "hello world";
     int len = strlen(ptr);
     int size = sizeof(ptr);
+
     printf("len=%d\n", len);
-    printf("size=%d\n", size);
+    printf("size=%d\n", size); // 静态数组在栈区，char *ptr 在全局区
+    printf("*ptr=%c", *ptr);
+    *ptr = 'H';
+    printf("*ptr=%c", *ptr); // 不可修改
 
 #endif
 

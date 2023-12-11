@@ -18,7 +18,7 @@ int main()
     {
         printf("array[%d]=%d\n", idx, array[idx]);
     }
-    // 清除脏数据
+    // 清除脏数据memset(array,0,sizeof(array))
     int len = sizeof(array);
     printf("len=%d\n", len);
     // 地址
