@@ -4,7 +4,7 @@
 typedef enum STATUS_CODE
 {
     ON_SUCCESS,
-    ON_ERROR = -5,
+    ON_ERROR,
     ON_NULLPTR,
     ON_MALLLOCFAIL,
     ON_INVALIDACCESS,
@@ -15,7 +15,6 @@ int calculateAdd(int num1, int num2)
     return num1 + num2;
 }
 
-// 函数声明
 int calculateSub(int num1, int num2)
 {
     return num1 - num2;

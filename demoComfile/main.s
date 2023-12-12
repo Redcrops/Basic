@@ -2,39 +2,12 @@
 	.text
 	.section	.rodata
 .LC0:
-	.string	"print string"
-	.text
-	.globl	printString
-	.type	printString, @function
-printString:
-.LFB6:
-	.cfi_startproc
-	endbr64
-	pushq	%rbp
-	.cfi_def_cfa_offset 16
-	.cfi_offset 6, -16
-	movq	%rsp, %rbp
-	.cfi_def_cfa_register 6
-	subq	$16, %rsp
-	movl	$0, -4(%rbp)
-	leaq	.LC0(%rip), %rax
-	movq	%rax, %rdi
-	call	puts@PLT
-	movl	-4(%rbp), %eax
-	leave
-	.cfi_def_cfa 7, 8
-	ret
-	.cfi_endproc
-.LFE6:
-	.size	printString, .-printString
-	.section	.rodata
-.LC1:
 	.string	"num1=%d"
 	.text
-	.globl	main
-	.type	main, @function
-main:
-.LFB7:
+	.globl	_Z4mianv
+	.type	_Z4mianv, @function
+_Z4mianv:
+.LFB6:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -46,19 +19,17 @@ main:
 	movl	$10, -4(%rbp)
 	movl	-4(%rbp), %eax
 	movl	%eax, %esi
-	leaq	.LC1(%rip), %rax
+	leaq	.LC0(%rip), %rax
 	movq	%rax, %rdi
 	movl	$0, %eax
-	call	printf@PLT
-	movl	$0, %eax
-	call	printString
+	call	_Z6printfPKcz@PLT
 	movl	$0, %eax
 	leave
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE7:
-	.size	main, .-main
+.LFE6:
+	.size	_Z4mianv, .-_Z4mianv
 	.ident	"GCC: (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0"
 	.section	.note.GNU-stack,"",@progbits
 	.section	.note.gnu.property,"a"
