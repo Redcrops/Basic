@@ -77,8 +77,8 @@ int main()
 
     // 给字符串赋值
     char *ptr2 = NULL;
-    // ptr2 = "zhangsan";
-    ptr2 = (char *)malloc(sizeof(char) * BUFFER_SIZE);
+    //  ptr2 = "zhangsan";
+    // ptr2 = (char *)malloc(sizeof(char) * BUFFER_SIZE);
     strcpy(ptr2, "zhangsan");
     printf("ptr2=%s\n", ptr2);
 #endif
